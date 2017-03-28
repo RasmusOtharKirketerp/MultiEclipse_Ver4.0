@@ -3,7 +3,7 @@
 // http://www.fourmilab.ch/cgi-bin/Solar
 // http://planets.findthedata.com/ 
 //
-package me3_one_element_at_a_time;
+package me3;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -11,6 +11,7 @@ import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
@@ -62,14 +63,17 @@ public class Planet {
 	public double planetYears;
 
 	public double scale = 1;
+
 	public void setImage() {
-		try {
-			planetImage = ImageIO.read(new File(UniverseData.IMAGEPATH + this.name + ".png"));
-		} catch (IOException e) {
+
+		String planetFileName = "img\\" + this.name + ".png";
+
+		if (this.planetLevel == 1) {
 			try {
-				planetImage = ImageIO.read(new File(UniverseData.IMAGEPATH + "Default.png"));
-			} catch (IOException e1) {
-				e1.printStackTrace();
+				planetImage = ImageIO.read(new File(planetFileName));
+			} catch (IOException e) {
+				System.out.println(this.name);
+				e.printStackTrace();
 			}
 		}
 
@@ -223,7 +227,7 @@ public class Planet {
 		getPlanetX((vinkelFraCenterTilPlanet));
 		getPlanetY((vinkelFraCenterTilPlanet));
 		beregnPlanetensGradIKredsløbet(ec.getSSClick());
-		//calcOrbit();
+		// calcOrbit();
 	}
 
 	// DRAW Funktion - Kan tegne alle elementer

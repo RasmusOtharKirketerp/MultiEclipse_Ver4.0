@@ -1,4 +1,4 @@
-package me3_one_element_at_a_time;
+package me3;
 
 public class Planet_Tester  {
 	static LokalKoordinatsystem aScreen = new LokalKoordinatsystem(GetScreenWorkingWidth(), GetScreenWorkingHeight());

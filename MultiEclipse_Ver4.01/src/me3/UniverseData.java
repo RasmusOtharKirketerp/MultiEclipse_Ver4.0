@@ -1,4 +1,4 @@
-package me3_one_element_at_a_time;
+package me3;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -20,14 +20,14 @@ public final class UniverseData {
 	ArrayList<Planet> allPlanetsToSun = new ArrayList<Planet>();
 
 	// path to images
-	static final String IMAGEPATH = "C:\\Users\\Rasmus\\git\\me3_one_element_at_a_time\\me3_one_element_at_a_time\\src\\me3_one_element_at_a_time\\";
+	static final String IMAGEPATH = "";
 
 	public UniverseData(boolean debug) {
 		for (int nyPlanetCounter = 0; nyPlanetCounter < UniverseData.MAX_PLANETS; nyPlanetCounter++) {
 			Planet nyPlanet = new Planet();
 			allPlanetsToSun.add(nyPlanet);
 			allPlanetsToSun.get(nyPlanetCounter).name = UniverseData.planetNames[nyPlanetCounter];
-			allPlanetsToSun.get(nyPlanetCounter).planetLevel = 1;
+			allPlanetsToSun.get(nyPlanetCounter).planetLevel = 1; 
 			allPlanetsToSun.get(nyPlanetCounter).color = UniverseData.planetColor[nyPlanetCounter];
 			allPlanetsToSun.get(nyPlanetCounter).setPlanetIndex(nyPlanetCounter);
 			allPlanetsToSun.get(nyPlanetCounter).planetensHastighed = planetSpeed[nyPlanetCounter];

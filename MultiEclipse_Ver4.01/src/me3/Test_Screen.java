@@ -1,4 +1,4 @@
-package me3_one_element_at_a_time;
+package me3;
 
 import java.awt.Color;
 import java.awt.Graphics;
