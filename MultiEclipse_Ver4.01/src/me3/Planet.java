@@ -11,7 +11,6 @@ import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
@@ -305,18 +304,12 @@ public class Planet {
 
 				if (planetLevel == 1) {
 					y = 0;
-					g.drawString(name + "O(" + (int) omkreds + ")", x + 20, y + 20);
+					g.drawString(name, x + 20, y + 20);
 					g.drawImage(planetImage, x + 20, y + 40, 40, 40, null);
 					g.setColor(allPlanets.get(i).color);
 					y = 10;
 				}
-				if (planetLevel == 2) {
-					y = 100;
-					g.drawString(name, x + 20, y + 20);
-					g.drawImage(planetImage, x + 20, y + 40, 40, 40, null);
-					g.setColor(allPlanets.get(i).color);
-					y = y + 10;
-				}
+
 				g.fillArc(x - 10, y, (int) (100), (int) (100), (int) vinklerTilAndrePlanet[i], 2);
 
 			}
