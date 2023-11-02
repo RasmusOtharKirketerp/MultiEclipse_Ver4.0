@@ -42,7 +42,7 @@ public class Planet_Tester  {
 			ec.click();
 			for (Planet planet : ud.allPlanetsToSun) {
 //				planet.calcPlanet(ec);
-				planet.beregnPlanetensGradIKredsløbet(ec.getSSClick());
+				planet.beregnPlanetensGradIKredsloebet(ec.getSSClick());
 				planet.getPlanetX(planet.vinkelFraCenterTilPlanet);
 				planet.getPlanetY(planet.vinkelFraCenterTilPlanet);
 

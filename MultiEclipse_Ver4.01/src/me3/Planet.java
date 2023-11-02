@@ -15,24 +15,24 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-// En planet indeholde selv sit eget kredsøb
+// En planet indeholde selv sit eget kredsï¿½b
 public class Planet {
 	double radiusTilKredsloebCenter = 0;
 	// planetIndex = plads/nummer fra centrum eks = Jorden = 3;
 	private int planetIndex = 0;
 
-	// planet level er en marings for hvilket niveau planet er på
+	// planet level er en marings for hvilket niveau planet er pï¿½
 	// level 0 = solen
 	// level 1 planeter = Jorden, mars Jupiter osv....
-	// level 2 er måner til level 1
-	// level 3 er måner til level 2....
+	// level 2 er mï¿½ner til level 1
+	// level 3 er mï¿½ner til level 2....
 	int planetLevel = 0;
 	private double radius = 1;
 
 	// orbit real x,y
 	int orbitRealX, orbitRealY = 0;
 
-	// faktisk X,Y er det rigtigt x,y på skærmen
+	// faktisk X,Y er det rigtigt x,y pï¿½ skï¿½rmen
 	long faktiskX = 0;
 	long faktiskY = 0;
 	// center X,Y er relativt
@@ -42,7 +42,7 @@ public class Planet {
 	// enheds Cirkel x,y
 	double eX, eY = 0;
 	float vinkelFraCenterTilPlanet = 0;
-	// VinklerTilAndrePlaneter bruges til at analyser om planter ligger på samme
+	// VinklerTilAndrePlaneter bruges til at analyser om planter ligger pï¿½ samme
 	// linje
 	long[] vinklerTilAndrePlanet = new long[10];
 
@@ -188,15 +188,15 @@ public class Planet {
 	}
 
 	public double beregnAfstandTilbagelagtIalt(double click) {
-		// afstand tilbagelagt i kredsløbet i alt
+		// afstand tilbagelagt i kredslï¿½bet i alt
 		double retVal = click * this.planetensHastighed;
 		this.planetensTilbagelagteAfstand = retVal;
 		this.planetYears = planetensTilbagelagteAfstand / omkreds;
 		return retVal;
 	}
 
-	public void beregnPlanetensGradIKredsløbet(double d) {
-		// Denne funktin skal retunere den grad planetet er i kredsløbet
+	public void beregnPlanetensGradIKredsloebet(double d) {
+		// Denne funktin skal retunere den grad planetet er i kredslï¿½bet
 		// ud fra den vinkel en linje skulle tegnes fra centrum og ud
 		float retVal = 0;
 		double afstand = this.planetensTilbagelagteAfstandFraStart
@@ -225,7 +225,7 @@ public class Planet {
 	public void calcPlanet(EclipseTime ec) {
 		getPlanetX((vinkelFraCenterTilPlanet));
 		getPlanetY((vinkelFraCenterTilPlanet));
-		beregnPlanetensGradIKredsløbet(ec.getSSClick());
+		beregnPlanetensGradIKredsloebet(ec.getSSClick());
 		// calcOrbit();
 	}
 
